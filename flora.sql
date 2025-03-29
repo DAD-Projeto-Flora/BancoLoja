@@ -30,7 +30,8 @@ CREATE TABLE produto
     preco_unid NUMERIC(10,2),
     id SERIAL PRIMARY KEY,
     id_categoria INT,
-    qnt_estoque INT
+    qnt_estoque INT,
+    nota_avaliacao NUMERIC(1,2) CHECK nota_avaliacao BETWEEN 1 AND 5
 );
 
 CREATE TABLE categoria
