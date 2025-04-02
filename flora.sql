@@ -32,6 +32,7 @@ CREATE TABLE produto
     id_categoria INT,
     qnt_estoque INT,
     nota_avaliacao NUMERIC(1,2) CHECK nota_avaliacao BETWEEN 1 AND 5
+    url_imagem VARCHAR(1024)
 );
 
 CREATE TABLE categoria
