@@ -67,7 +67,7 @@ CREATE TABLE endereco
 CREATE TABLE admin
 (
     id SERIAL PRIMARY KEY,
-    admin_name VARCHAR UNIQUE,
+    nome VARCHAR UNIQUE,
     email VARCHAR(50) UNIQUE,
     senha VARCHAR(50)
 );
