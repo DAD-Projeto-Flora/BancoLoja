@@ -31,7 +31,7 @@ CREATE TABLE produto
     id SERIAL PRIMARY KEY,
     id_categoria INT,
     qnt_estoque INT,
-    nota_avaliacao NUMERIC(1,2) CHECK nota_avaliacao BETWEEN 1 AND 5
+    nota_avaliacao NUMERIC(10,2) CONSTRAINT nota_negativa CHECK(nota_avaliacao BETWEEN 1 AND 5),
     url_imagem VARCHAR(1024)
 );
 
