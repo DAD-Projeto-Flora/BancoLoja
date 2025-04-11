@@ -5,9 +5,10 @@ CREATE TABLE cliente
     email VARCHAR(50) UNIQUE,
     nome_usuario VARCHAR(50) UNIQUE,
     foto_perfil VARCHAR(500),
+    genero VARCHAR(30),
+    cpf VARCHAR(15),
     senha VARCHAR(30),
     telefone VARCHAR(11)
-
 );
 
 CREATE TABLE pedido
@@ -19,9 +20,7 @@ CREATE TABLE pedido
     qnt_produto INT,
     forma_pgto VARCHAR(50),
     data_pgto DATE,
-    preco_total NUMERIC(10,2),
-    idCliente INT,
-    idProduto INT
+    preco_total NUMERIC(10,2)
 );
 
 CREATE TABLE produto
@@ -60,8 +59,8 @@ CREATE TABLE endereco
     logradouro VARCHAR(50),
     bairro VARCHAR(50),
     cidade VARCHAR(50),
-    estado VARCHAR(50),
-    ponto_referencia VARCHAR(30)
+    estado VARCHAR(2),
+    complemento VARCHAR(30)
 );
 
 CREATE TABLE admin
