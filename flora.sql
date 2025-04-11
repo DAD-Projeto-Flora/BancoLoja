@@ -4,11 +4,12 @@ CREATE TABLE cliente
     nome_completo VARCHAR(90),
     email VARCHAR(50) UNIQUE,
     nome_usuario VARCHAR(50) UNIQUE,
-    foto_perfil VARCHAR(500),
     genero VARCHAR(30),
     cpf VARCHAR(15),
+    foto_perfil VARCHAR(1500),
     senha VARCHAR(30),
     telefone VARCHAR(11)
+
 );
 
 CREATE TABLE pedido
@@ -21,11 +22,12 @@ CREATE TABLE pedido
     forma_pgto VARCHAR(50),
     data_pgto DATE,
     preco_total NUMERIC(10,2)
+
 );
 
 CREATE TABLE produto
 (
-    nome VARCHAR(50),
+    nome VARCHAR(200),
     preco_unid NUMERIC(10,2),
     id SERIAL PRIMARY KEY,
     id_categoria INT,
@@ -76,5 +78,3 @@ ALTER TABLE pedido ADD FOREIGN KEY(id_produto) REFERENCES produto (id);
 ALTER TABLE produto ADD FOREIGN KEY(id_categoria) REFERENCES categoria (id);
 ALTER TABLE cartao ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id);
 ALTER TABLE endereco ADD FOREIGN KEY(id_cliente) REFERENCES cliente (id);
-
-
